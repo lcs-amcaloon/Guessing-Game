@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @State private var userGuess = ""
     
-    let target = Int.random(in: 1...100)
+    @State private var target = Int.random(in: 1...100)
     
     @State private var feedback = ""
     
@@ -38,11 +38,23 @@ struct ContentView: View {
                     
                     Text("You Guessed: \(userGuess)")
                     Text("\(feedback)")
+                    Text("\(target)")
+                }
+                
+                Section{
+                    Button("Restart Game"){
+                        //what we want the button to do
+                        gameStart()
+                    }
                 }
             }
             .navigationBarTitle("Guessing Game")
         }
 
+    }
+    
+    func gameStart(){
+        target = Int.random(in: 1...100)
     }
 
     func checkGuess(){
@@ -58,7 +70,16 @@ struct ContentView: View {
             return
         }
         
-        feedback = "You made a guess"
+        if givenInteger == target{
+            feedback = "You Guessed it!"
+        }
+        else if givenInteger > target{
+            feedback = "Too High"
+        }
+        
+        else if givenInteger < target{
+            feedback = "Too low"
+        }
         
     }
     
