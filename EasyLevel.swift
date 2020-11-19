@@ -1,30 +1,28 @@
 //
-//  ContentView.swift
+//  EasyLevel.swift
 //  Guessing Game
 //
-//  Created by Angus McAloon on 2020-11-17.
+//  Created by Angus McAloon on 2020-11-18.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct EasyLevel: View {
     
     @State private var userGuess = ""
     
-    @State private var target = Int.random(in: 1...100)
+    @State private var target = Int.random(in: 1...10)
     
     @State private var feedback = ""
     
     // Keep track of whether the game is over
     @State private var gameOver = false
     
-    
     var body: some View {
-        
         NavigationView{
             Form{
                 Section{
-                Text("I'm thinking of a number between 1 and 100. Guess What it is!")
+                Text("I'm thinking of a number between 1 and 10. Guess What it is!")
                 }
                 
                 Section{
@@ -43,12 +41,6 @@ struct ContentView: View {
                     Text("\(feedback)")
                 }
                 
-                Section{
-                    Button("Easy:"){
-                        
-                    }
-                }
-                
                 if gameOver == true{
                     Section{
                         Button("New Game"){
@@ -62,11 +54,10 @@ struct ContentView: View {
             }
             .navigationBarTitle("Guessing Game")
         }
-
     }
     
     func gameStart(){
-        target = Int.random(in: 1...100)
+        target = Int.random(in: 1...10)
         userGuess = ""
         feedback = ""
         gameOver = false
@@ -75,13 +66,13 @@ struct ContentView: View {
     func checkGuess(){
         guard let givenInteger = Int(userGuess)
         else {
-            feedback = "Please provide an integer between 1 and 100"
+            feedback = "Please provide an integer between 1 and 10"
             return
         }
         
-        guard givenInteger > 0, givenInteger < 101
+        guard givenInteger > 0, givenInteger < 11
         else{
-            feedback = "Please give a number greater than 1 and less than 101"
+            feedback = "Please give a number greater than 1 and less than 11"
             return
         }
         
@@ -98,11 +89,10 @@ struct ContentView: View {
         }
         
     }
-    
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct EasyLevel_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        EasyLevel()
     }
 }

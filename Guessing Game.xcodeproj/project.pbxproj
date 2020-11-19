@@ -11,6 +11,9 @@
 		CED1F57B25645E4B00E9F28E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1F57A25645E4B00E9F28E /* ContentView.swift */; };
 		CED1F57D25645E4E00E9F28E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CED1F57C25645E4E00E9F28E /* Assets.xcassets */; };
 		CED1F58025645E4E00E9F28E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CED1F57F25645E4E00E9F28E /* Preview Assets.xcassets */; };
+		CEFA4FFA2565A84B00796729 /* main screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFA4FF92565A84B00796729 /* main screen.swift */; };
+		CEFA4FFD2565AE0E00796729 /* EasyLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFA4FFC2565AE0E00796729 /* EasyLevel.swift */; };
+		CEFA50002565AEE400796729 /* HardLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFA4FFF2565AEE400796729 /* HardLevel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		CED1F57C25645E4E00E9F28E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CED1F57F25645E4E00E9F28E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CED1F58125645E4E00E9F28E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEFA4FF92565A84B00796729 /* main screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "main screen.swift"; sourceTree = "<group>"; };
+		CEFA4FFC2565AE0E00796729 /* EasyLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyLevel.swift; sourceTree = "<group>"; };
+		CEFA4FFF2565AEE400796729 /* HardLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardLevel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +42,9 @@
 		CED1F56C25645E4B00E9F28E = {
 			isa = PBXGroup;
 			children = (
+				CEFA4FFF2565AEE400796729 /* HardLevel.swift */,
+				CEFA4FFC2565AE0E00796729 /* EasyLevel.swift */,
+				CEFA4FF92565A84B00796729 /* main screen.swift */,
 				CED1F57725645E4B00E9F28E /* Guessing Game */,
 				CED1F57625645E4B00E9F28E /* Products */,
 			);
@@ -138,8 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEFA4FFD2565AE0E00796729 /* EasyLevel.swift in Sources */,
+				CEFA50002565AEE400796729 /* HardLevel.swift in Sources */,
 				CED1F57B25645E4B00E9F28E /* ContentView.swift in Sources */,
 				CED1F57925645E4B00E9F28E /* Guessing_GameApp.swift in Sources */,
+				CEFA4FFA2565A84B00796729 /* main screen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
